@@ -1,0 +1,338 @@
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micro Learning: Circular Economy Games</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Die Icons in diesem Code habe ich mithilfe von ChatGPt erstellt bekommen -->
+<!-- In ChatGPT nach dem Begriff und ein passendes Icon gefragt -->
+<header><h1>🌍 Micro Learning: Circular Economy Games</h1></header>
+
+<nav>
+  <button data-target="start">🏠 Start</button>
+  <button data-target="introMemory">🧠 Memory</button>
+  <button data-target="introPuzzle">🧩 Puzzle</button>
+  <button data-target="introProduct">♻️ Produktleben</button>
+</nav>
+
+<main>
+
+<section id="start" class="active">
+  <h2>Circular Economy – Nachhaltigkeit spielerisch lernen</h2>
+
+  <p><strong>Was passiert mit einem Produkt nach seiner Nutzung?</strong><br>
+  Wie können wir Ressourcen schonen und Abfall vermeiden?</p>
+
+  <p>
+    Diese Webseite vermittelt die Grundlagen der <strong>Circular Economy (Kreislaufwirtschaft)</strong>
+    auf spielerische und interaktive Weise.
+    Mit Lernspielen wie <strong>Memory</strong>, <strong>Puzzle</strong> und <strong>Produktleben</strong>
+    erforschst du den Lebensweg von Produkten und lernst, warum Wiederverwendung, Reparatur und Recycling wichtig sind.
+  </p>
+
+  <p>
+    Die Spiele helfen dir, Zusammenhänge selbst zu entdecken und nachhaltiges Denken zu entwickeln –
+    spannend, verständlich und praxisnah.
+  </p>
+
+  <p>
+    Diese Webseite ist im Rahmen einer Masterarbeit entstanden und verbindet wissenschaftliche Erkenntnisse
+    mit spielerischem Lernen für den Schulunterricht. Die Arbeit wird betreut von
+    <strong>Prof. Dr. Sabrina Eimler</strong>.
+  </p>
+
+  <p>
+    Die Inhalte richten sich besonders an Schüler:innen und können sowohl im Unterricht
+    als auch zum selbstständigen Lernen genutzt werden.
+  </p>
+	<p style="margin-top:20px; font-weight:bold; color:#1b4332; text-align:center; font-size:1.2rem;">
+		🌍 Viel Spaß beim Entdecken der Circular Economy – und beim Spielen!
+	</p>
+  <div style="display:flex; justify-content:flex-end; margin-top:20px;">
+    <button onclick="praesentation()" class="start-btn">
+      Weiter zur Präsentation
+    </button>
+  </div>
+</section>
+
+<section id="presentation" class="intro">
+  <h2 style="text-align:center;">📊 Präsentation: Kreislaufwirtschaft</h2>
+  <iframe
+    src="Kreislaufwirtschaft_Grundlagen_Präsentation.pdf"
+    width="100%"
+    height="600px"
+    style="border:none; border-radius:16px; box-shadow:0 6px 0 #40916c;">
+  </iframe>
+  <br>
+  <div style="display:flex; justify-content:flex-end;">
+    <button onclick="closeGame()" class="close-btn">Schließen</button>
+  </div>
+</section>
+
+<!-- Memory -->
+<section id="introMemory" class="intro">
+<h2>🧠 Spielanleitung – Memory</h2>
+
+<p><strong>Willkommen zum Memory-Spiel!</strong></p>
+
+<p>
+In diesem Spiel verbindest du Begriffe aus der Circular Economy mit passenden Darstellungen.
+</p>
+
+<h3>🎯 So funktioniert das Spiel</h3>
+
+<p>
+Du deckst immer zwei Karten auf und versuchst, passende Paare zu finden.
+</p>
+
+<p>Ein Paar besteht aus:</p>
+<ul>
+  <li>einem Begriff (z. B. „Recycle" oder „Repair")</li>
+  <li>einem passenden Bild, Video oder Hinweis</li>
+</ul>
+
+<p>
+Wenn die Karten zusammenpassen, bleiben sie sichtbar. Wenn nicht, drehen sie sich wieder um.
+</p>
+
+<h3>🔍 Worauf du achten musst</h3>
+
+<ul>
+  <li>Merke dir gut, wo welche Karten liegen</li>
+  <li>Überlege, welche Begriffe zusammengehören</li>
+  <li>Achte auf Bilder und Hinweise</li>
+</ul>
+
+<h3>🌱 Lernziel</h3>
+
+<ul>
+  <li>Begriffe der Circular Economy verstehen</li>
+  <li>Zusammenhänge erkennen (z. B. Recycling, Reparatur, Wiederverwendung)</li>
+  <li>Gedächtnis und Konzentration trainieren</li>
+</ul>
+
+<h3>🏆 Ziel des Spiels</h3>
+
+<p>
+Finde alle Paare so schnell wie möglich!
+</p>
+
+<p>
+<strong>💡 Tipp:</strong><br>
+👉 Versuche dir Positionen und Inhalte gut zu merken – das hilft dir beim Gewinnen!
+</p>
+
+<button id="startMemory">Spiel starten</button>
+</section>
+
+<section id="memory">
+<div style="margin-bottom: 15px;">
+  <button id="resetMemory">Reset</button>
+  </div>
+<div class="memory-body">
+<h2>Memory – Begriffe & Darstellungen</h2>
+<div id="memoryBoard" class="board"></div>
+</div>
+</section>
+
+<!-- Puzzle -->
+<section id="introPuzzle" class="intro">
+<h2>🧩 Spielanleitung – Energie-Puzzle</h2>
+
+<p><strong>Willkommen zum Energie-Puzzle!</strong></p>
+
+<p>In diesem Spiel beschäftigst du dich mit dem Thema Energie und Nachhaltigkeit.</p>
+
+<p>
+Du siehst verschiedene Begriffe wie z. B. Glühbirne, Solarenergie oder Wärmepumpe.
+Deine Aufgabe ist es, diese Begriffe richtig im Puzzle zuzuordnen.
+</p>
+
+<h3>🎯 So funktioniert das Spiel</h3>
+
+<p>Überlege bei jedem Begriff:</p>
+<ul>
+  <li>Ist diese Technologie gut für das Klima?</li>
+  <li>Spart sie Energie oder verbraucht sie viel?</li>
+  <li>Wo gehört sie im Puzzle hin?</li>
+</ul>
+
+<p>Klicke oder ziehe die Begriffe in die passenden Felder.</p>
+
+<h3>🌱 Lernziel</h3>
+
+<ul>
+  <li>welche Technologien umweltfreundlich sind</li>
+  <li>wie Energie eingespart werden kann</li>
+  <li>welche Entscheidungen im Alltag nachhaltig sind</li>
+</ul>
+
+<h3>🏆 Bewertung</h3>
+
+<p>Am Ende erhältst du eine Auswertung deiner Leistung:</p>
+
+<ul>
+  <li>🟢 sehr nachhaltig</li>
+  <li>🟡 mittel nachhaltig</li>
+  <li>🔴 wenig nachhaltig</li>
+</ul>
+
+<p><strong>💡 Tipp:</strong> Nimm dir Zeit und denke nach – nicht jede Lösung ist sofort offensichtlich!</p>
+
+<button id="startPuzzle">Spiel starten</button>
+</section>
+
+<section id="puzzle">
+<h2>Puzzle</h2>
+<button id="resetPuzzle">Reset</button>
+<div style="margin-bottom:10px; display:flex; flex-wrap:wrap; gap:6px; justify-content:center;">
+<button data-item="LED">LED</button>
+<button data-item="Bulb">Glühbirne</button>
+<button data-item="Solar">Solar</button>
+<button data-item="Insulation">Dämmung</button>
+<button data-item="HeatPump">Wärmepumpe</button>
+<button data-item="Recycle">Recycling</button>
+</div>
+<div id="gridPuzzle" class="puzzle-grid"></div>
+<div id="statsPuzzle" style="margin-top:10px; font-weight:bold; color:#1fa67a;"></div>
+<div id="puzzleResult" style="margin-top:10px; font-weight:bold;"></div>
+<button class="close-btn" onclick="fertig()">Schließen</button>
+</section>
+
+<!-- Produktleben -->
+<section id="introProduct" class="intro">
+<h2>🌍 Spielanleitung – Produktleben</h2>
+
+<p><strong>Willkommen zum Spiel „Produktleben"!</strong></p>
+
+<p>
+In diesem Spiel lernst du, wie lange ein Produkt genutzt wird und welchen Einfluss es auf die Umwelt hat.
+</p>
+
+<h3>🎯 So funktioniert das Spiel</h3>
+
+<p>
+Du begleitest verschiedene Produkte durch ihren Lebenszyklus – von der Herstellung über die Nutzung bis hin zur Entsorgung oder Wiederverwertung.
+</p>
+
+<p>
+Deine Aufgabe ist es, Entscheidungen zu treffen und zu erkennen, wie nachhaltig ein Produkt wirklich ist.
+</p>
+
+<h3>🔍 Worauf du achten musst</h3>
+
+<p>Überlege bei jedem Schritt:</p>
+
+<ul>
+  <li>Wie lange kann das Produkt genutzt werden?</li>
+  <li>Kann es repariert oder wiederverwendet werden?</li>
+  <li>Was passiert am Ende seines Lebens?</li>
+</ul>
+
+<h3>🌱 Lernziel</h3>
+
+<ul>
+  <li>wie Produkte hergestellt und entsorgt werden</li>
+  <li>warum Reparieren besser als Wegwerfen ist</li>
+  <li>wie Recycling die Umwelt schützt</li>
+  <li>was nachhaltiger Konsum bedeutet</li>
+</ul>
+
+<h3>🏆 Bewertung</h3>
+
+<p>Am Ende siehst du, wie nachhaltig deine Entscheidungen waren:</p>
+
+<ul>
+  <li>🟢 sehr nachhaltig</li>
+  <li>🟡 mittel nachhaltig</li>
+  <li>🔴 wenig nachhaltig</li>
+</ul>
+
+<p>
+<strong>💡 Tipp:</strong><br>
+👉 Das nachhaltigste Produkt ist oft das, das am längsten genutzt wird!
+</p>
+
+<button id="startProductIntro">Spiel starten</button>
+</section>
+
+<section id="productlife">
+<div class="product-body">
+<h2>Produktleben – Entscheidungen im Kreislauf</h2>
+<div id="productDisplay"><span id="productName" style="font-size:1.5rem; font-weight:bold; color:#1fa67a;"></span></div>
+<div id="actionsArea" style="margin-top:10px; display:flex; flex-wrap:wrap; gap:10px;"></div>
+<button id="skipBtn">Runde beenden</button>
+<div class="log" id="logBox"></div>
+<div class="sidebar">
+Runde: <span id="roundBox">1</span>/6<br>
+Punkte: <span id="pointsBox">0</span><br>
+CO₂: <span id="co2Box">0</span> kg<br>
+Zustand: <span id="condBox">0</span>%<br>
+Effizienz: <span id="effBox">0</span>%<br>
+Zufriedenheit: <span id="satBox">0</span>%<br><br>
+<button id="restartBtn">Neues Spiel</button>
+</div>
+<div class="chart">
+<div class="bar-label">🌍 CO₂</div><div id="barCO2" class="bar">0</div>
+<div class="bar-label">🛠 Zustand</div><div id="barCond" class="bar">0</div>
+<div class="bar-label">⚡ Effizienz</div><div id="barEff" class="bar">0</div>
+<div class="bar-label">😊 Zufriedenheit</div><div id="barSat" class="bar">0</div>
+</div>
+<div id="rankingBox"></div>
+<div id="reflectionBox" style="display:none;margin-top:20px;">
+<h3>Reflexion</h3>
+<p id="reflectionQuestion"></p>
+<textarea id="reflectionAnswer" rows="3" placeholder="Deine Antwort..."></textarea>
+<br><br>
+<button id="nextReflection">Nächste Frage</button>
+<div id="reflectionProgress"></div>
+</div>
+<div id="actionPopup"></div>
+</div>
+<button class="close-btn" onclick="fertig()">Schließen</button>
+</section>
+
+<section id="memoryQuiz" class="intro">
+  <h2>🧠 Memory Quiz</h2>
+  <p id="quizQuestion"></p>
+  <div id="quizAnswers"></div>
+  <p id="quizFeedback"></p>
+  <button id="nextQuizBtn">Nächste Frage</button>
+  <button onclick="fertig()">Schließen</button>
+</section>
+
+<section id="abschluss" class="intro">
+<img src="https://cdn-icons-png.flaticon.com/512/744/744922.png" class="abschluss-bild">
+  <h2>🎉 Spiel abgeschlossen!</h2>
+
+  <p id="abschlussText">
+🎉 Super gemacht! Du hast alle Spiele erfolgreich abgeschlossen und dein Wissen zur Circular Economy erweitert.
+Jede richtige Entscheidung hilft unserer Umwelt 🌍 – bleib dran!
+</p>
+
+  <button onclick="neustart()">Nochmal spielen</button>
+</section>
+
+</main>
+
+<div id="puzzlePopup">
+  <div class="box">
+    <div id="puzzlePopupText"></div>
+    <button id="closePuzzleBtn">OK</button>
+  </div>
+</div>
+<div id="finalPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:9999;">
+  <div class="box">
+    <h2>🎯 Ergebnis</h2>
+    <p id="finalText"></p>
+    <p id="finalScore"></p>
+    <button onclick="schliessePopup()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
