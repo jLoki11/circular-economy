@@ -428,3 +428,27 @@ section { position: relative; }
     bottom: 15px;
   }
 }
+/* Präsentation responsive */
+
+.presentation-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 #40916c;
+}
+
+.presentation-wrapper iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  display: block;
+}
+
+/* Handy */
+@media (max-width: 768px) {
+
+  .presentation-wrapper iframe {
+    height: 60vh;
+  }
+
+}
