@@ -18,37 +18,37 @@ document.querySelectorAll("nav button").forEach(function(b) {
 
 
 var memoryCards = [
-  {group:"Recycle",type:"term",content:"Recycle"},
+  {group:"Recycle",type:"term",content:"Recyclen"},
   {group:"Recycle",type:"img",content:"https://i.imgur.com/uQBbIxo.jpeg"},
-  {group:"Reduce",type:"term",content:"Reduce"},
+  {group:"Reduce",type:"term",content:"Reduzieren"},
   {group:"Reduce",type:"img",content:"https://i.imgur.com/kXetSwT.jpeg"},
-  {group:"Repair",type:"term",content:"Repair"},
+  {group:"Repair",type:"term",content:"Reparieren"},
   {group:"Repair",type:"video",content:'<video controls style="width:100%;height:100%;"><source src="Repair.mp4" type="video/mp4"></video>'},
-  {group:"Reuse",type:"term",content:"Reuse"},
+  {group:"Reuse",type:"term",content:"Wiederverwenden"},
   {group:"Reuse",type:"video",content:'<video controls style="width:100%;height:100%;"><source src="Reuse.mp4" type="video/mp4"></video>'},
-  {group:"Upcycling",type:"term",content:"Upcycling"},
-  {group:"Upcycling",type:"text",content:"Up____ing"},
-  {group:"Sharing",type:"term",content:"Sharing"},
+  {group:"Upcycling",type:"term",content:"Wiederverwertung"},
+  {group:"Upcycling",type:"text",content:"Wie______ung"},
+  {group:"Sharing",type:"term",content:"Teilen"},
   {group:"Sharing",type:"video",content:'<video controls style="width:100%;height:100%;"><source src="Sharing.mp4" type="video/mp4"></video>'},
-  {group:"Compost",type:"term",content:"Compost"},
+  {group:"Compost",type:"term",content:"Kompostieren"},
   {group:"Compost",type:"img",content:"https://i.imgur.com/eC87rcn.jpeg"},
-  {group:"Remanufacture",type:"term",content:"Remanufacture"},
+  {group:"Remanufacture",type:"term",content:"Wiederaufbereitung"},
   {group:"Remanufacture",type:"img",content:"https://i.imgur.com/OF2u0jw.jpeg"}
 ];
 
 var quiz = [
   {
-    q: "Was bedeutet Recycle?",
+    q: "Was bedeutet Recyclen?",
     a: ["Dinge wegwerfen", "Materialien wiederverwenden", "Neu kaufen", "Verbrennen"],
     correct: 1
   },
   {
-    q: "Was bedeutet Reduce?",
+    q: "Was bedeutet Reduzieren?",
     a: ["Mehr konsumieren", "Weniger Ressourcen verbrauchen", "Alles reparieren", "Tauschen"],
     correct: 1
   },
   {
-    q: "Was ist Upcycling?",
+    q: "Was ist Wiederverwertung?",
     a: ["Reparieren", "Altes in etwas Besseres verwandeln", "Wegwerfen", "Verkaufen"],
     correct: 1
   }
@@ -57,14 +57,14 @@ var quiz = [
 var quizIndex = 0;
 
 var erklaerungen = {
-  Recycle: "♻️ Recycle bedeutet, Materialien wiederzuverwenden, um neue Produkte herzustellen.",
-  Reduce: "📉 Reduce heißt, weniger Ressourcen zu verbrauchen und Abfall zu vermeiden.",
-  Repair: "🔧 Repair verlängert die Lebensdauer von Produkten.",
-  Reuse: "🔁 Reuse bedeutet, Dinge mehrfach zu verwenden statt sie wegzuwerfen.",
-  Upcycling: "✨ Upcycling verwandelt alte Produkte in etwas Neues und Wertvolleres.",
-  Sharing: "🤝 Sharing spart Ressourcen, weil mehrere Menschen ein Produkt nutzen.",
-  Compost: "🌱 Compost verwandelt Bioabfälle in nährstoffreiche Erde.",
-  Remanufacture: "🏭 Remanufacture bedeutet, alte Produkte industriell neu aufzubereiten."
+  Recycle: "♻️ Recyceln bedeutet, Materialien wiederzuverwenden, um neue Produkte herzustellen.",
+  Reduce: "📉 Reduzieren heißt, weniger Ressourcen zu verbrauchen und Abfall zu vermeiden.",
+  Repair: "🔧 Reparieren verlängert die Lebensdauer von Produkten.",
+  Reuse: "🔁 Wiederverwenden bedeutet, Dinge mehrfach zu verwenden statt sie wegzuwerfen.",
+  Upcycling: "✨ Wiederverwertung verwandelt alte Produkte in etwas Neues und Wertvolleres.",
+  Sharing: "🤝 Teilen spart Ressourcen, weil mehrere Menschen ein Produkt nutzen.",
+  Compost: "🌱 Kompostieren verwandelt Bioabfälle in nährstoffreiche Erde.",
+  Remanufacture: "🏭 Wiederaufbereitung bedeutet, alte Produkte industriell neu aufzubereiten."
 };
 
 var first = null;
