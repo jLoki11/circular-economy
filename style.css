@@ -329,3 +329,102 @@ section { position: relative; }
   100% { transform: scale(1); }
 }
 #abschluss { text-align: center; }
+/* =========================
+   MOBILE OPTIMIERUNG
+========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 16px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  nav button {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+
+  main section {
+    padding: 14px;
+  }
+
+  .intro,
+  .memory-body,
+  .product-body {
+    padding: 14px;
+  }
+
+  /* MEMORY */
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .face {
+    font-size: 0.9rem;
+  }
+
+  .front {
+    font-size: 1.8rem;
+  }
+
+  /* PUZZLE */
+  .puzzle-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .puzzle-cell {
+    min-height: 70px;
+    font-size: 0.65rem;
+    padding: 4px;
+  }
+
+  [data-item] img {
+    width: 42px;
+    height: 42px;
+  }
+
+  [data-item] span {
+    font-size: 0.65rem;
+  }
+
+  /* PRODUKTLEBEN */
+  #actionsArea {
+    flex-direction: column;
+  }
+
+  #actionsArea button {
+    width: 100%;
+  }
+
+  .chart .bar {
+    font-size: 0.8rem;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  iframe {
+    height: 350px;
+  }
+
+  .close-btn {
+    width: calc(100% - 30px);
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
