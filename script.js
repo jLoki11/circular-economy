@@ -647,11 +647,4 @@ function neustart() {
   document.getElementById("start").classList.add("active");
 }
 
-function praesentation() {
-  document.querySelectorAll("main section").forEach(function(s) {
-    s.classList.remove("active");
-  });
-  document.getElementById("presentation").classList.add("active");
-  var btn = document.getElementById("presentationBtn");
-  if (btn) btn.style.display = "none";
-}
+
