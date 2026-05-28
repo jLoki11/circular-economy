@@ -452,3 +452,18 @@ section { position: relative; }
   }
 
 }
+.pdf-btn {
+  display: inline-block;
+  padding: 16px 24px;
+  background: linear-gradient(#2dc653, #52b788);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #1b4332;
+  margin-top: 20px;
+}
+
+.pdf-btn:hover {
+  transform: translateY(-2px);
+}
